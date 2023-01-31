@@ -13,6 +13,7 @@ export default function pushPrice(arr, product) {
             return array
         } else {
             product.map(item => {
+                console.log(item);
                 if (array.includes(item.props.price * item.value)) {
                     return
                 } else {

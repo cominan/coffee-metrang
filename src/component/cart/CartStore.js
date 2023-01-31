@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React, { memo, useEffect, useState } from 'react';
+import React, { memo, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { getDataInLocal } from '../../config';
 import ModalDel from './modal-cart/ModalDel';
@@ -16,7 +16,7 @@ function CartStore() {
 
   //Tổng số đơn hàng có trong giỏ
   let total = product ? newArray.length : ''
-
+  const [choice, setChoice] = useState(false)
   //Khỏi tạo giá trị của tổng đơn hàng ứng với số đơn hàng
   const [value, setValue] = useState(0)
 
@@ -50,18 +50,22 @@ function CartStore() {
               check={check}
               setCheck={setCheck}
             />
-            <CartResp
-              productList={product}
-              onclick={handleBlockModal}
-              arr={newArray}
-              setId={setId}
-              check={check}
-              setCheck={setCheck}
-              setValue={setValue}
-            />
-            <Pay sumPrice={value} />
+            <div className='mb:block tb:hidden'>
+              <CartResp
+                productList={product}
+                onclick={handleBlockModal}
+                arr={newArray}
+                setId={setId}
+                check={check}
+                setCheck={setCheck}
+                setValue={setValue}
+                choice={choice}
+              />
+            </div>
+            <Pay sumPrice={value} total={total} />
             <ModalDel
               id='id03'
+              setChoice={setChoice}
               idel={id}
               funcdel={handleDel}
               onclick={handleHiddenModal}

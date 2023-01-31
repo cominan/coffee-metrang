@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Product from './Product'
 
 
-export default function CartResp({ productList, onclick, arr, setId, setValue }) {
+export default function CartResp({ productList, onclick, arr, setId, setValue, choice }) {
+    const [del, setDel] = useState()
     return (
-        <div>
+        <div className='mb:block tb:hidden'>
             {
                 arr.length !== productList.length ?
                     arr.map(item => {
@@ -23,6 +24,10 @@ export default function CartResp({ productList, onclick, arr, setId, setValue })
                                 length={length}
                                 setValues={setValue}
                                 setId={setId}
+                                onclick={onclick}
+                                choice={choice}
+                                del={del}
+                                setDel={setDel}
                             />
                         )
                     }) :
@@ -43,6 +48,10 @@ export default function CartResp({ productList, onclick, arr, setId, setValue })
                                 length={length}
                                 setValues={setValue}
                                 setId={setId}
+                                onclick={onclick}
+                                choice={choice}
+                                del={del}
+                                setDel={setDel}
                             />
                         )
                     })

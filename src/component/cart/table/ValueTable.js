@@ -6,6 +6,7 @@ import totalPrice from '../../logic/total-price/Total'
 
 
 export let array = []
+
 export default function ValueTable(props) {
     let valuePrice = addCommas(props.price)
 
@@ -30,18 +31,17 @@ export default function ValueTable(props) {
         }
     }
 
-    
+    //Hàm chỉ chạy khi checkAll 
     useEffect(() => {
-        if (props.length === array.length) {
-            props.check ? setCheck(true) : setCheck(false)
-        }
-    }, [props.check])
+        setCheck(props.check)
+    }, [props.choice])
 
     //hàm check chọn sản phẩm render ra giá tổng
     const handlePrice = () => {
-        if (check && props.check) {
-            setCheck(!check)
-            props.setCheck(!check)
+
+        if (props.check) {
+            props.setCheck(!props.check)
+            setCheck(!props.check)
         } else {
             setCheck(!check)
         }
@@ -69,6 +69,7 @@ export default function ValueTable(props) {
 
     //hàm tính giá trị tiền ô thành tiền khi thay đổi số lượng
     const handleValue = (e) => {
+        setCheck(true)
         if (e.target.value < 0) {
             setValue(1)
             setPrice(total(initPrice, 1))
@@ -79,7 +80,7 @@ export default function ValueTable(props) {
             array.push(total(initPrice, e.target.value))
         }
 
-       
+
         //xử lý khi người dùng đang check và sửa sản phầm
         if (check) {
             let index = array.findIndex(item => item === price)

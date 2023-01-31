@@ -26,7 +26,7 @@ export default function Adress() {
             <img
               className='h-[148px] w-[334px]'
               alt='metrang'
-              src='https://scontent.fsgn7-2.fna.fbcdn.net/v/t39.30808-6/289453249_5092192000830757_8322408580530216554_n.jpg?stp=dst-jpg_p526x296&_nc_cat=103&ccb=1-7&_nc_sid=dd9801&_nc_ohc=Jq4F9XUp2fcAX_8MHro&_nc_ht=scontent.fsgn7-2.fna&edm=ADwHzz8EAAAA&oh=00_AfA4RWDDmEP4bQ5elBn-5kL0D-v9NBRGUHnnet3gTIFeZQ&oe=63CBE394'
+              src='https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-6/289453249_5092192000830757_8322408580530216554_n.jpg?stp=dst-jpg_p526x296&_nc_cat=103&ccb=1-7&_nc_sid=dd9801&_nc_ohc=u3odRP__UX0AX_CY_cA&_nc_ht=scontent.fsgn2-5.fna&edm=ADwHzz8EAAAA&oh=00_AfC8SLEoPxTg1S3eP3Iq7_B3FPyc64VHARksfVWC7oZ-cA&oe=63DDAFD4'
             />
           </div>
           <div className=''>
@@ -34,7 +34,7 @@ export default function Adress() {
               <img
                 className='w-[54px]'
                 alt='metrang'
-                src='https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-1/278065247_4884905721559387_5401728093926738888_n.jpg?stp=cp0_dst-jpg_p80x80&_nc_cat=111&ccb=1-7&_nc_sid=dbb9e7&_nc_ohc=y6ndIWa-2u8AX-64fm0&_nc_ht=scontent.fsgn7-1.fna&edm=ADwHzz8EAAAA&oh=00_AfC4twwN4UMnPwgIDyNEs7IaNZqi4MSyM6q50q6FGvtk2A&oe=63CA9398'
+                src='https://scontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-1/278065247_4884905721559387_5401728093926738888_n.jpg?stp=cp0_dst-jpg_p80x80&_nc_cat=111&ccb=1-7&_nc_sid=dbb9e7&_nc_ohc=V2sw3uiufqcAX_d3vGk&_nc_ht=scontent.fsgn2-7.fna&edm=ADwHzz8EAAAA&oh=00_AfBzZoWmF0ydra3jwD6XwdFDiMaSSHGBsCvfvbfOXS0c9w&oe=63DE5A18'
               />
             </div>
             <div className='absolute top-[3.3rem] left-20 text-b z-[3]'>

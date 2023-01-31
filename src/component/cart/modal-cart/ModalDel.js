@@ -1,11 +1,13 @@
 import React from 'react'
 
 export default function ModalDel(props) {
+  
     const handleHiddenModal = () => {
         props.onclick()
     }
     const handleDel = () => {
         props.funcdel(props.idel)
+        props.setChoice(true)
         props.onclick()
     }
     return (

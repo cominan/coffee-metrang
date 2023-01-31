@@ -23,6 +23,13 @@ function App() {
   }, [])
 
   let params = useLocation()
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  },[params.pathname])
+
   return (
     <div className="App">
       {

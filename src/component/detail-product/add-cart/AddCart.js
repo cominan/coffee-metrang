@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addCommas } from '../../../config/index'
+import { total, totalItem } from '../../../store/coffeeSlice'
 import filterDuplicateElements from '../../logic/sort/filterDuplicateElement'
 
 export default function AddCart(props) {
@@ -39,8 +40,7 @@ export default function AddCart(props) {
     const handleBuyProduct = () => {
         let values = { props, value }
         filterDuplicateElements(values)
-        // saveLocal('product', products)
-        // dispatch(product(products))
+        dispatch(total(props.id))
     }
     return (
         <div>

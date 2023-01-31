@@ -1,15 +1,16 @@
 /* eslint-disable no-self-compare */
 /* eslint-disable no-use-before-define */
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React from 'react'
+import React, { useState } from 'react'
 import totalPrice from '../../logic/total-price/Total'
 import pushPrice from './pushPrice'
 import ValueTable from './ValueTable'
 
 export default function TableCart({ productList, onclick, arr, setId, value, check, setCheck }) {
-
+    const [choice, setChoice] = useState(true)
 
     const handleChangeAll = () => {
+        setChoice(!choice)
         setCheck(!check)
         if (!check) {
             let price = pushPrice(arr, productList)
@@ -19,7 +20,6 @@ export default function TableCart({ productList, onclick, arr, setId, value, che
             value(0)
         }
     }
-
     return (
         <div className='max-w-[80%] m-auto bg-b rounded-sm tb:block mb:hidden'>
             <table className='table-fixed text-center'>
@@ -59,6 +59,7 @@ export default function TableCart({ productList, onclick, arr, setId, value, che
                                     length={length}
                                     check={check}
                                     setCheck={setCheck}
+                                    choice={choice}
                                 />
                             )
                         }) :
@@ -80,6 +81,7 @@ export default function TableCart({ productList, onclick, arr, setId, value, che
                                     length={length}
                                     check={check}
                                     setCheck={setCheck}
+                                    choice={choice}
                                 />
                             )
                         })

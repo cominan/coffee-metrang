@@ -45,7 +45,6 @@ export default function DetailProduct() {
                     <ImageProduct value={props.data.url} />
                     <div className='col-span-1'>
                         <AddCart
-                            
                             id={props.data.id}
                             img={props.data.url}
                             price={props.data.price}

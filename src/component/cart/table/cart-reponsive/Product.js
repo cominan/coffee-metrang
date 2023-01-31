@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { Children, useEffect, useState } from 'react'
 import { addCommas } from '../../../../config'
 import totalPrice from '../../../logic/total-price/Total'
 
@@ -6,7 +6,7 @@ import totalPrice from '../../../logic/total-price/Total'
 export let array = []
 
 
-export default function Product({ products, prices, price, length, setValues, setId, id }) {
+export default function Product({ products, prices, price, length, setValues, setId, id, onclick, choice, del, setDel }) {
     const [count, setCount] = useState(length)
     //Tính tổng tiền sau chi user change ô số lượng
     const [value, setValue] = useState(prices)
@@ -22,7 +22,7 @@ export default function Product({ products, prices, price, length, setValues, se
         } else {
             setCount(number)
             setValue(number * price)
-            array.splice(index,1)
+            array.splice(index, 1)
             array.push(+number * price)
             setValues(totalPrice(array))
         }
@@ -40,13 +40,21 @@ export default function Product({ products, prices, price, length, setValues, se
         setValues(totalPrice(array))
     }, [])
 
-
+    //user delete product
     const handleButton = () => {
+        setDel(value)
         onclick()
         setId(id)
     }
-
-
+    useEffect(() => {
+        if (choice) {
+            let index = array.findIndex(item => item === +del)
+            if (index >= 0) {
+                array.splice(index, 1)
+                setValues(totalPrice(array))
+            }
+        }
+    }, [choice, del])
 
     return (
         <div>
