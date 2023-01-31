@@ -36,7 +36,7 @@ function CartStore() {
 
 
   return (
-    <div className=''>
+    <div className='mt-4'>
       {
         product !== null ?
           <div>
