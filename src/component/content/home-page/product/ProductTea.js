@@ -7,7 +7,7 @@ export default function ProductTea() {
     const value = useSelector(valueCoffee)
     let products = value.Category
     return (
-        <div className='tb:h-[724px] text-b px-12'>
+        <div className='lp:h-[724px] mt-2 text-b px-12'>
             <div className='relative border-b-2 border-bo'>
                 <div className='bg-primary rounded-md mb-5 px-2 lp:w-[3%] mb:w-[12%] tb:w-[6%]'>
                     <p>Trà</p>
@@ -16,7 +16,7 @@ export default function ProductTea() {
                     <p className='font-l'>TEA</p>
                 </div>
             </div>
-            <div className='mt-10 tb:grid tb:grid-cols-4 mb:block text-center gap-2'>
+            <div className='mt-10 tb:grid tb:grid-cols-3 lp:grid-cols-4 mb:block text-center gap-2'>
                 {products && products.Tea.slice(0,4).map(product => {
                     return (
                         <div key={product.id} className='col-span-1'>

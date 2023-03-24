@@ -26,7 +26,7 @@ module.exports = {
     screens: {
       'mb': '350px',
       // => @media (min-width : 350px) { ... }
-      'tb': '700px',
+      'tb': '640px',
       // => @media (min-width: 640px) { ... }
 
       'lp': '1024px',

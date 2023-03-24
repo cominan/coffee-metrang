@@ -4,6 +4,11 @@ import { BsFillCartFill } from "react-icons/bs";
 
 
 export default function TotalProduct({ total }) {
+    let a =[1,2,3,4]
+    a[10]=5
+    a.filter(item => {
+        console.log('hello');
+    })
     return (
         <div
             className=

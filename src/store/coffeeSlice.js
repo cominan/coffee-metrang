@@ -14,7 +14,7 @@ export const coffeeSlice = createSlice({
         apiCoffee: (state, action) => {
             state.apicoffee = action.payload
         },
-        product: (state, action) => {
+        product: (state, action) => {   
             state.product.push(action.payload)
         },
         total: (state, action) => {

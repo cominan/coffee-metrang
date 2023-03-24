@@ -7,7 +7,7 @@ export default function ProductGroundCoffee() {
     const value = useSelector(valueCoffee)
     let products = value.Category
     return (
-        <div className='tb:h-[724px] text-b px-12'>
+        <div className='lp:h-[724px] text-b px-12'>
             <div className='relative border-b-2 border-bo'>
                 <div className='bg-primary rounded-md mb-5 px-2 lp:w-[7%] tb:w-[15%] mb:w-[30%]'>
                     <p>Cà Phê Bột</p>
@@ -16,7 +16,7 @@ export default function ProductGroundCoffee() {
                     <p className='font-l'>GROUND COFFEE</p>
                 </div>
             </div>
-            <div className='mt-10 mb:block tb:grid tb:grid-cols-4 text-center gap-2'>
+            <div className='mt-10 mb:block tb:grid tb:grid-cols-3 lp:grid-cols-4 text-center gap-2'>
                 {products && products.GroundCofffe.slice(0,4).map(product => {
                     return (
                         <div key={product.id} className='col-span-1'>
