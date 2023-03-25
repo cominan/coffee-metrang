@@ -12,6 +12,7 @@ export const coffeeSlice = createSlice({
     initialState: initValue,
     reducers: {
         apiCoffee: (state, action) => {
+            console.log(action.payload);
             state.apicoffee = action.payload
         },
         product: (state, action) => {   

@@ -1,5 +1,4 @@
 import { getAuth, isSignInWithEmailLink, signInWithEmailLink } from 'firebase/auth'
-import { auth } from '../../../config/firebase/config'
 
 export default async function loginEmail() {
     const auths = getAuth()
